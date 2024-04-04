@@ -2,12 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+import MemberPortal from "../../Assets/Projects/MemberPortal.png";
+import CRM from "../../Assets/Projects/CRM.png";
+import Auxcon from "../../Assets/Projects/Auxcon.png";
+import iqacademy from "../../Assets/Projects/iqacademy.png";
+import abacus from "../../Assets/Projects/abacus.png";
+import jaychemical from "../../Assets/Projects/jaychemical.png";
+import hmis from "../../Assets/Projects/hmis.png";
 import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (
@@ -23,68 +25,93 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={MemberPortal}
+              isBlog={false}
+              title="Member Portal TAG"
+              description="Responsible for Member's Details in Web Applications for TAG. In That Members Can Manage their Suppliers, Can Check Price List's, Can Refere another members, Subscribe themselfs using this Portal."
+              technologyUsed="ASP.NET MVC,C#,ANGULARJS,SQL Server , C#,.NET, SQL Server, Angular Js"
+              demoLink="https://member.tradealliance.com.au/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={CRM}
+              isBlog={false}
+              title="CRM Portal TAG"
+              description="Admin Portal for TAG. Responsible for Manage Payments, Supliers,Members, Orders with their details"
+              technologyUsed="ASP.NET MVC,C#,ANGULARJS,SQL Server ,C#,.NET, SQL Server, Angular Js,Azure Tables"
+              demoLink="https://crm.tradealliance.com.au/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Order Portal TAG"
+              description="Managing Order's for TAG"
+              technologyUsed="ASP.NET MVC,C#,ANGULARJS,SQL Server ,C#,.NET, SQL Server, Angular Js,Azure Tables"
+              demoLink="https://order.tradealliance.com.au/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={Auxcon}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Auxcon"
+              description="Used for Invoicing and matter management,Reconciliation of payments,Blue-chip debtor management,Expenses and accounting,Practice awareness for Advocate"
+              technologyUsed=".NET Core, Angular, SQL Server, Azure Serverless,Radis Caching,Azure 360 Logic Apps,Azure Function Applications"
+              demoLink="https://www.auxcon.co.za/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={iqacademy}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="IQ Academy"
+              description="Build Background Process as per requirement."
+              technologyUsed="Azure 360 Logic Apps"
+              demoLink="https://www.iqacademy.ac.za/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={abacus}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Abacus Insurance"
+              description="Implemented Logic Apps and Azure functions based on client requirements for validate claims/ Policies.Give support in Front end Implementation."
+              technologyUsed="Azure Function, .Net Core,C#, React"
+              demoLink="https://www.abacus-insurance.co.za/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={jaychemical}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="CRM Portal - Reporting Tool"
+              description="Implemented Reporting Plateform from when Users can see all Financial Reports"
+              technologyUsed=".Net Core,C#, Angular,Sql Server"
+              demoLink="https://jaychemical.com/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={hmis}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="HMIS"
+              description="eCLinicalWoks Product - A unified hospital management solution to
+              help streamline operations, reduce costs and
+              improve healthcare."
+              technologyUsed=".Net Webforms,C#, Sql Server"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Auto Upgrade"
+              description="eCLinicalWoks Internal Product - Automate Process for Deploying Product at client side"
+              technologyUsed=".Net,C#,Window Applications"
             />
           </Col>
         </Row>
